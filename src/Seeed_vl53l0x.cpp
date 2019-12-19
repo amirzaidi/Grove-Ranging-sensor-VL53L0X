@@ -43,10 +43,10 @@ void Seeed_vl53l0x::print_pal_error(VL53L0X_Error Status)
 {
 	char buf[VL53L0X_MAX_STRING_LENGTH];
     VL53L0X_GetPalErrorString(Status, buf);
-	// Serial.print("API Status:");
-	// Serial.print(Status);
-	// Serial.print("API error string:");
-	// Serial.println(buf);
+	Serial.print("API Status:");
+	Serial.print(Status);
+	Serial.print("API error string:");
+	Serial.println(buf);
 }
 
 /**@brief Print ranging status through param:pRangingMeasurementData
