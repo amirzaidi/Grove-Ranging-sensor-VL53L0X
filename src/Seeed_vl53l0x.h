@@ -97,6 +97,11 @@ class Seeed_vl53l0x
 
 		VL53L0X_Error PerformSingleRangingMeasurement(VL53L0X_RangingMeasurementData_t* RangingMeasurementData);
 		VL53L0X_Error PerformContinuousRangingMeasurement(VL53L0X_RangingMeasurementData_t* RangingMeasurementData);
+		
+		VL53L0X_Dev_t MyDevice;
+		VL53L0X_Dev_t *pMyDevice = &MyDevice;
+		
+		u8 stat;
 	private:
 		void VL53L0X_IIC_init(u8 IIC_ADDRESS = IIC_DEFAULT_ADDR);
 		VL53L0X_Error check_version();
@@ -105,8 +110,6 @@ class Seeed_vl53l0x
 		VL53L0X_Error VL53L0X_calibration_set();
 		
 		
-		VL53L0X_Dev_t MyDevice;
-		VL53L0X_Dev_t *pMyDevice = &MyDevice;
 		VL53L0X_Version_t   Version;
 		VL53L0X_Version_t   *pVersion   = &Version;
 		//VL53L0X_DeviceInfo_t DeviceInfo;
